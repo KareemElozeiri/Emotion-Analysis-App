@@ -1,16 +1,18 @@
 import cv2
-from UI.UI import UI
+from GUI.GUI import GUI
+from src.Camera import Camera
 
 
 class App:
     def __init__(self)->None:
-        self.UI = UI() 
+        self.GUI = GUI() 
+        self.Camera = Camera()
 
     '''
         open the UI and starts the functions of the application
     '''
     def start(self)->None:
-        self.UI.run()
+        self.GUI.run()
 
     '''
         ends the life cycle of the application 
